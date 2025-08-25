@@ -51,7 +51,8 @@ def main():
     print(f"Running on {num_processes} processes")
     # Load the dual_codewords matrix once
     print("Loading dual min codewords matrix...")
-    dual_codewords = np.load('dualdecvec.npy').astype(bool)
+    #dual_codewords = np.load('dualdecvec.npy').astype(bool)
+    dual_codewords = np.loadtxt('dualdecvec_nploadtxt.txt').astype(bool)
     # Calculate batch size per process
     batch_size = sim_num // num_processes
     remainder = sim_num % num_processes
